@@ -1,0 +1,16 @@
+INDEX VERSION 1.131+C:\yuming\IDEA2019File\IS_student\.metadata\.plugins\org.eclipse.jdt.core
+2957335872.index
+917510716.index
+2018262832.index
+217141839.index
+590034217.index
+1077674461.index
+3117935658.index
+645189056.index
+862926321.index
+2612343903.index
+3390858850.index
+154277613.index
+408651151.index
+228468429.index
+980258094.index
