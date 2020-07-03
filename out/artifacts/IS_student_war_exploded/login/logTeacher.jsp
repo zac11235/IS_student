@@ -13,8 +13,8 @@
 </head>
 <body>
 <div id="form">
-    <s:form action="" class="" method="POST">
-        <s:textfield name="loginName" label="职工号" size="22" value="admin"/>
+    <s:form action="loginTeac.action" class="" method="POST">
+        <s:textfield name="loginId" label="职工号" size="22" value="1703001"/>
         <s:password name="loginPwd"  label="密码" size="22"/>
 
         <s:submit  value="登录" align="center"/>

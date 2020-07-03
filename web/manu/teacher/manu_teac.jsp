@@ -16,14 +16,12 @@
 </head>
 <body>
 <div id="header">
-    <h1 id="captain">查询</h1>
+    <h1 id="captain">查询菜单</h1>
 </div>
 <ul class="nav nav-pills nav-stacked">
-    <li class="active"><a href="main_teac.jsp">个人信息</a></li>
-    <li><a href="#">课程表</a></li>
+    <li class="active"><a href="./manu/teacher/main_teac.jsp">个人信息</a></li>
+    <li><a href="manu/teacher/t_lesson.jsp">课程表</a></li>
     <li><a href="#">成绩单</a></li>
-    <li><a href="#">荣誉墙</a></li>
-    <li><a href="#">违纪处分</a></li>
 </ul>
 </body>
 </html>

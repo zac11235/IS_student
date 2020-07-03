@@ -6,7 +6,7 @@
 
 <struts>
     <constant name="struts.devMode" value="true" />
-    <constant name="struts.ui.theme" value="simple"/>
+    <constant name="struts.ui.theme" value="xhtml"/>
     <package name="MyPackage" extends="struts-default">
         <action name="first">
             <result>/test/first.jsp</result>
@@ -22,6 +22,11 @@
             <result name="success">/test/main.jsp</result>
             <result name="login">/test/login.jsp</result>
             <result name="input">/test/login.jsp</result>
+        </action>
+        <action name="loginTeac" class="teacher.LoginT">
+            <result name="success">/manu/teacher/manu_teac.jsp</result>
+            <result name="login">/login/logTeacher.jsp</result>
+            <result name="input">/login/logTeacher.jsp</result>
         </action>
     </package>
 </struts>

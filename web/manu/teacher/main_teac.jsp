@@ -15,23 +15,23 @@
     <title>教师基本信息</title>
 </head>
 <body>
+<jsp:useBean id="teacBean" class="teacher.TeacBean" scope="session"/>
 <table class="table">
-    <caption>基本的表格布局</caption>
+    <h1 align="center">教师信息</h1>
     <thead>
     <tr>
-        <th>名称</th>
-        <th>城市</th>
+        <th>职工号</th>
+        <th>姓名</th>
+        <th>学院</th>
+        <th>办公室</th>
     </tr>
     </thead>
     <tbody>
     <tr>
-        <td>Tanmay</td>
-        <td>Bangalore</td>
-    </tr>
-    <tr>
-        <td>Sachin</td>
-        <td>Mumbai</td>
-    </tr>
+        <td><%=teacBean.getId()%></td>
+        <td><%=teacBean.getName()%></td>
+        <td><%=teacBean.getDept()%></td>
+        <td><%=teacBean.getOffice()%></td>
     </tbody>
 </table>
 </body>
