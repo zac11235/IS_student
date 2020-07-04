@@ -11,6 +11,12 @@
     <title>搜索</title>
 </head>
 <body>
-<h1>搜索</h1>
+<thead><caption>搜索</caption></thead><br/>
+<table class="table">
+
+<tr>
+    <input  type="search" value="学号"> <input type="button" value="搜索">
+    </tr>
+</table>
 </body>
 </html>

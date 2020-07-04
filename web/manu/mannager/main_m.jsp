@@ -18,8 +18,8 @@
 <body>
 <table class="table">
     <caption>管理员信息</caption>
-    <thead>
-    <tr>
+
+    <thead> <tr>
         <th>账户</th>
         <th>姓名</th>
         <th>电话</th>

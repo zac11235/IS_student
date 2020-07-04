@@ -20,7 +20,7 @@
     --%>
 </head>
 <body>
-    <h1 align="center">教师上课表</h1>
+    <h1 align="center">上课表</h1>
     <table  class="table table-bordered">
         <thead>
         <tr align="center" valign="middle">
@@ -30,9 +30,9 @@
             <th>上课时间</th>
         </tr>
         </thead>
-        <jsp:useBean id="teacBean" class="teacher.TeacBean"/>
+        <jsp:useBean id="manBean" class="mannager.ManBean"/>
         <%
-            Vector lesson=(Vector)teacBean.readLesson();
+            Vector lesson=(Vector)manBean.readLesson();
             for(int i=0;i<lesson.size();i++){
                 Lesson order= (Lesson) lesson.elementAt(i);
         %>

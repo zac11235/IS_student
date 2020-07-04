@@ -30,9 +30,9 @@
             <th>上课时间</th>
         </tr>
         </thead>
-        <jsp:useBean id="manBean" class="teacher.TeacBean"/>
+        <jsp:useBean id="teacBean" class="teacher.TeacBean"/>
         <%
-            Vector lesson=(Vector)manBean.readLesson();
+            Vector lesson=(Vector)teacBean.readLesson();
             for(int i=0;i<lesson.size();i++){
                 Lesson order= (Lesson) lesson.elementAt(i);
         %>

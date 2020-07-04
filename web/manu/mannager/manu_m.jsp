@@ -16,13 +16,14 @@
 </head>
 <body>
 <div id="header">
-    <h1 id="captain">管理员个人信息查询</h1>
+    <h1 id="captain">管理员信息查询</h1>
 </div>
 <div id="nav">
 <ul class="nav nav-pills nav-stacked">
-    <li class="active"><a href="manu/mannager/main_m.jsp">个人信息</a></li>
-    <li><a href="#">荣誉墙</a></li>
-    <li><a href="#">违纪处分</a></li>
+    <li class="active"><a href="manu/mannager/main_m.jsp" target = "showframe">个人信息</a></li>
+    <li><a href="manu/mannager/m_lesson.jsp" target = "showframe">课表</a></li>
+    <li><a href="manu/mannager/search.jsp">搜索学生</a></li>
+    <li><a href="manu/mannager/weiji.jsp">违纪处分</a></li>
 </ul>
 </div>
 <div id="section">

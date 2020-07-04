@@ -3,10 +3,7 @@ package mannager;
 import DB.Datab;
 import DB.Lesson;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.Vector;
 
 public class ManBean extends Datab {
@@ -85,10 +82,9 @@ public class ManBean extends Datab {
             try {
 
                 Connection conn = getcon();
-                String sql = "select * from lesson where teacher_id=?";
-                PreparedStatement pStmt = conn.prepareStatement(sql);
-                pStmt.setString(1, "1703001");
-                ResultSet rs = pStmt.executeQuery();
+                String sql = "select * from lesson ";
+                Statement Stmt = conn.createStatement();
+                ResultSet rs = Stmt.executeQuery(sql);
                 while (rs.next()) {
                     //从当前记录中读取各字段的
                     Lesson ls = new Lesson(); //创建了不同对象
@@ -136,21 +132,21 @@ public class ManBean extends Datab {
         return super.update(x);
     }
 
-    //测试号成功,bean的使用存在问题。bean对象在类中创建能直接被jsp网页读取吗？
-//    public static void main(String[] args) throws SQLException {
-//        TeacBean ub = new TeacBean();
-//        TeacBean bb = new TeacBean();
-////		ub.login();
-//        if (ub.read("1703001", "111aaa")) System.out.println("true");
-//        else System.out.println("false");
-//        ub.read("1703001", "111aaa");
-//        System.out.println(ub.getId());
-//        System.out.println(ub.getName());
-//        Vector lesson = (Vector) bb.readLesson();
-//        for (int i = 0; i < lesson.size(); i++) {
-//            Lesson order = (Lesson) lesson.elementAt(i);
-//            System.out.println(order.getName());
-//            System.out.println(order.getTime());
-//        }
-//    }
+//    测试号成功,bean的使用存在问题。bean对象在类中创建能直接被jsp网页读取吗？
+    public static void main(String[] args) throws SQLException {
+        ManBean ub = new ManBean();
+        ManBean bb = new ManBean();
+//		ub.login();
+        if (ub.read("1703001", "111aaa")) System.out.println("true");
+        else System.out.println("false");
+        ub.read("1703001", "111aaa");
+        System.out.println(ub.getId());
+        System.out.println(ub.getName());
+        Vector lesson = (Vector) bb.readLesson();
+        for (int i = 0; i < lesson.size(); i++) {
+            Lesson order = (Lesson) lesson.elementAt(i);
+            System.out.println(order.getName());
+            System.out.println(order.getTime());
+        }
+    }
 }
