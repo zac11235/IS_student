@@ -17,20 +17,23 @@
   </head>
   <body>
   <div class="bg-primary" align="center" style="background-color:lightblue">
-    <h1>欢迎来到XXXX学校学生信息系统</h1>
+    <h1>欢迎来到哈尔滨工业大学（威海）学生信息系统</h1>
   </div>
-  <div id="header" >
-    <s:form action="loginAction.action" class="" method="POST" style="align:center;">
-      <s:textfield name="loginName" label="学号" size="22" value="admin"/>
-      <s:password name="loginPwd"  label="密码" size="22"/>
-     <%-- <checkboxlist list="">
-        <checkbox value="stu">学生</checkbox>
-        <checkbox value="teac">教师</checkbox>
-        <checkbox value="mann">管理员</checkbox>
-      </checkboxlist>
-      --%>
+  <div id="form" class="bg-primary" align="center">
+    <h4>学生登录</h4>
+    <s:form action="loginAction.action" class="" method="POST">
+      <s:textfield name="model.id" label="学号" size="22" />
+      <s:password name="model.loginPwd"  label="密码" size="22"/>
+      <%-- <checkboxlist list="">
+         <checkbox value="stu">学生</checkbox>
+         <checkbox value="teac">教师</checkbox>
+         <checkbox value="mann">管理员</checkbox>
+       </checkboxlist>
+       --%>
       <s:submit  value="登录" align="center"/>
       <s:reset  value="重置" align="center"/>
+
+
     </s:form>
 
   <div id="">

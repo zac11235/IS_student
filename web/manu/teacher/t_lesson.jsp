@@ -5,6 +5,7 @@
 <%@page import="teacher.TeacBean"%>
 <%@ page import="DB.Lesson" %>
 <%@ page import="org.apache.struts2.ServletActionContext" %>
+<%@ page import="teacher.Loginbean" %>
 <html><head>
     <link rel="stylesheet" type="text/css" href="../../css/styles.css">
     <link rel="stylesheet"  href="../../bs/css/bootstrap.css">
@@ -31,8 +32,9 @@
         </tr>
         </thead>
         <jsp:useBean id="teacBean" class="teacher.TeacBean"/>
-        <%
-            Vector lesson=(Vector)teacBean.readLesson();
+        <% String t_id;
+            t_id=(String) ServletActionContext.getRequest().getSession().getAttribute("t_id");
+            Vector lesson=(Vector)teacBean.readLesson(t_id);
             for(int i=0;i<lesson.size();i++){
                 Lesson order= (Lesson) lesson.elementAt(i);
         %>

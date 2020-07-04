@@ -1,5 +1,5 @@
 package teacher;
-class Loginbean {
+public class Loginbean {
 	public Loginbean(){
 
 	}

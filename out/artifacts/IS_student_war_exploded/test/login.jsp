@@ -11,7 +11,7 @@
   <body >
  <div  id="header" >
      <h1>登录</h1>
-   <form action="loginAction.action" method="post" >
+   <form action="loginAction2.action" method="post" >
       <p> 用户名：<s:textfield name="loginName"  size="22" value="admin"/></p><br/>
          <p>密码：<s:password name="loginPwd"  label="密码" size="22"/></p><br/>
     	<s:submit  value="登录" />&nbsp;

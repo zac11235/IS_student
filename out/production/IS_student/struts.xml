@@ -7,27 +7,35 @@
 <struts>
     <constant name="struts.devMode" value="true" />
     <constant name="struts.ui.theme" value="xhtml"/>
-    <package name="MyPackage" extends="struts-default">
-        <action name="first">
-            <result>/test/first.jsp</result>
-        </action>
-    </package>
-    <package name="my" extends="struts-default" namespace="/">
-        <action name="loginAction" class="lib.LoginActionModel">
+    <!-- <constant name="struts.locale" value="en_US"/>-->
+    <constant name="struts.custom.i18n.resources" value="globalMessages"/>
+    <!-- 设置是否重新加载struts.xml配置文件 -->
+    <constant name="struts.configuration.xml.reload" value="true"/>
+    <!-- 设置是否支持OGNL静态方法的调用 -->
+    <constant name="struts.ognl.allowStaticMethodAccess" value="true"/>
+    <!-- 设置是否支持动态方法的调用 -->
+    <constant name="struts.enable.DynamicMethodInvocation" value="true"/>
+    <package name="my" extends="struts-default" >
+        <action name="loginAction2" class="lib.LoginActionModel">
             <result name="success">/test/main.jsp</result>
             <result name="login">/test/login.jsp</result>
             <result name="input">/test/login.jsp</result>
         </action>
+        <action name="loginAction" class="lib.LoginAction1">
+        <result name="success">/manu/student/main.jsp</result>
+        <result name="login">/login/index.jsp</result>
+        <result name="input">/login/index.jsp</result>
+    </action>
         <action name="loginStu" class="lib.LoginActionModel">
             <result name="success">/test/main.jsp</result>
             <result name="login">/test/login.jsp</result>
             <result name="input">/test/login.jsp</result>
         </action>
         <action name="loginTeac" class="teacher.LoginT">
-        <result name="success">/manu/teacher/manu_teac.jsp</result>
-        <result name="login">/login/logTeacher.jsp</result>
-        <result name="input">/login/logTeacher.jsp</result>
-    </action>
+            <result name="success">/manu/teacher/manu_teac.jsp</result>
+            <result name="login">/login/logTeacher.jsp</result>
+            <result name="input">/login/logTeacher.jsp</result>
+        </action>
         <action name="loginAdmin" class="mannager.LoginM">
             <result name="success">/manu/mannager/manu_m.jsp</result>
             <result name="login">/login/logMannager.jsp</result>

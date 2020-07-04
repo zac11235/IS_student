@@ -21,7 +21,7 @@ public class LoginM extends ActionSupport implements ModelDriven<Loginbean>{
 //		  System.out.println(teacBean.getName());
 	    if(flag){
 	      //通过ServletActionContext辅助类直接访问session
-			ServletActionContext.getRequest().getSession().setAttribute("phone", getManBean().getId());
+			ServletActionContext.getRequest().getSession().setAttribute("phone", getManBean().getPhone());
 			ServletActionContext.getRequest().getSession().setAttribute("name", getManBean().getName());
 	      ServletActionContext.getRequest().getSession().setAttribute("logined", getModel().getLoginId());
 	      return SUCCESS; //登录成功

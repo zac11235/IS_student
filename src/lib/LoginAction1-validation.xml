@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  <!DOCTYPE validators PUBLIC "-//OpenSymphony Group//XWork Validator1.0.2//EN" "xwork-validator-1.0.2.dtd">-->
+<!DOCTYPE validators PUBLIC "-//Apache Struts//XWork Validator 1.0.2//EN" "http://struts.apache.org/dtds/xwork-validator-1.0.2.dtd">
+<validators>
+  <!--  检查用户名是否为空 -->
+  <field name="model.id">
+    <field-validator type="requiredstring">
+      <param name="trim">true</param>
+      <message>学号不能为空</message>
+    </field-validator>
+  </field>
+  <field name="model.loginPwd">
+    <field-validator type="requiredstring">
+      <param name="trim">true</param>
+      <message>密码不能为空</message>
+    </field-validator>
+    <field-validator type="stringlength">
+      <param name="minLength">4</param>
+      <param name="maxLength">12</param>
+      <message>密码长度大于5小于12</message>
+      <!-- <message>密码长度大于${minLength}小于${maxLength}</message>-->
+    </field-validator>
+  </field>   
+</validators>

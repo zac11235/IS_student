@@ -84,7 +84,7 @@ public class TeacBean extends Datab {
     }
 
 
-    public Vector<Lesson> readLesson( ) throws SQLException {
+    public Vector<Lesson> readLesson(String t_id ) throws SQLException {
         {
             Vector<Lesson> lessons = new Vector<Lesson>(100, 100);
             try {
@@ -92,7 +92,7 @@ public class TeacBean extends Datab {
                 Connection conn = getcon();
                 String sql = "select * from lesson where teacher_id=?";
                 PreparedStatement pStmt = conn.prepareStatement(sql);
-                pStmt.setString(1, "1703001");
+                pStmt.setString(1, t_id);
                 ResultSet rs = pStmt.executeQuery();
                 while (rs.next()) {
                     //从当前记录中读取各字段的

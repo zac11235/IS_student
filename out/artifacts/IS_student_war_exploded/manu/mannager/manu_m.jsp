@@ -9,10 +9,10 @@
 <html>
 <head>
     <title>学生信息系统</title>
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <link rel="stylesheet"  href="bs/css/bootstrap.css">
-    <script src="bs/js/jquery.min.js"></script>
-    <script src="bs/js/bootstrap.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+    <link rel="stylesheet"  href="../bs/css/bootstrap.css">
+    <script src="../bs/js/jquery.min.js"></script>
+    <script src="../bs/js/bootstrap.js"></script>
 </head>
 <body>
 <div id="header">
@@ -20,14 +20,15 @@
 </div>
 <div id="nav">
 <ul class="nav nav-pills nav-stacked">
-    <li class="active"><a href="manu/mannager/main_m.jsp" target = "showframe">个人信息</a></li>
-    <li><a href="manu/mannager/m_lesson.jsp" target = "showframe">课表</a></li>
-    <li><a href="manu/mannager/search.jsp">搜索学生</a></li>
-    <li><a href="manu/mannager/weiji.jsp">违纪处分</a></li>
+    <li class="active"><a href="../manu/mannager/main_m.jsp" target = "showframe">个人信息</a></li>
+    <li><a href="../manu/mannager/m_lesson.jsp" target = "showframe">课表</a></li>
+    <li><a href="../manu/mannager/searh_m.jsp">搜索学生</a></li>
+    <li><a href="../manu/mannager/weiji.jsp">违纪处分</a></li>
+    <li><a href="index.jsp" >退出</a></li>
 </ul>
 </div>
 <div id="section">
-    <iframe name="showframe" width="100%" height="100%" src="manu/mannager/main_m.jsp" method="post"/>
+    <iframe name="showframe" width="100%" height="100%" src="../manu/mannager/main_m.jsp" method="post"/>
 </div>
 </body>
 </html>
