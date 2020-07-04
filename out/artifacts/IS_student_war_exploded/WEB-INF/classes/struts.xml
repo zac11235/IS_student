@@ -24,9 +24,14 @@
             <result name="input">/test/login.jsp</result>
         </action>
         <action name="loginTeac" class="teacher.LoginT">
-            <result name="success">/manu/teacher/manu_teac.jsp</result>
-            <result name="login">/login/logTeacher.jsp</result>
-            <result name="input">/login/logTeacher.jsp</result>
+        <result name="success">/manu/teacher/manu_teac.jsp</result>
+        <result name="login">/login/logTeacher.jsp</result>
+        <result name="input">/login/logTeacher.jsp</result>
+    </action>
+        <action name="loginAdmin" class="mannager.LoginM">
+            <result name="success">/manu/mannager/manu_m.jsp</result>
+            <result name="login">/login/logMannager.jsp</result>
+            <result name="input">/login/logMannager.jsp</result>
         </action>
     </package>
 </struts>

@@ -1,4 +1,4 @@
-package teacher;
+package mannager;
 
 import DB.Lesson;
 import com.opensymphony.xwork2.ActionSupport;
@@ -7,9 +7,9 @@ import org.apache.struts2.ServletActionContext;
 
 import java.util.Vector;
 
-public class LoginT extends ActionSupport implements ModelDriven<Loginbean>{
-	private TeacBean teacBean=new TeacBean();
-	public TeacBean getTeacBean() { return teacBean;
+public class LoginM extends ActionSupport implements ModelDriven<Loginbean>{
+	private ManBean manBean =new ManBean();
+	public ManBean getManBean() { return manBean;
 }
 	private Loginbean model=new Loginbean();
 	  public Loginbean getModel(){return model;}
@@ -17,13 +17,12 @@ public class LoginT extends ActionSupport implements ModelDriven<Loginbean>{
 	    //简单的登录验证
 		String id= getModel().getLoginId();
 		  String pwd= getModel().getLoginPwd();
-		  boolean flag = teacBean.read(id,pwd);
+		  boolean flag = manBean.read(id,pwd);
 //		  System.out.println(teacBean.getName());
 	    if(flag){
 	      //通过ServletActionContext辅助类直接访问session
-			ServletActionContext.getRequest().getSession().setAttribute("dept", getTeacBean().getDept());
-			ServletActionContext.getRequest().getSession().setAttribute("office", getTeacBean().getOffice());
-			ServletActionContext.getRequest().getSession().setAttribute("name", getTeacBean().getName());
+			ServletActionContext.getRequest().getSession().setAttribute("phone", getManBean().getId());
+			ServletActionContext.getRequest().getSession().setAttribute("name", getManBean().getName());
 	      ServletActionContext.getRequest().getSession().setAttribute("logined", getModel().getLoginId());
 	      return SUCCESS; //登录成功
 	    }else  return INPUT;  //重新登录
@@ -31,26 +30,26 @@ public class LoginT extends ActionSupport implements ModelDriven<Loginbean>{
 	  @Override
 	  public void validate(){ //重载ActionSupport类的validate方法
 	    if(getModel().getLoginId()==null|| getModel().getLoginId().trim().length()<1)
-	      addFieldError("loginName","登录账号不能为空！");	      
-	    if(getModel().getLoginPwd()==null|| getModel().getLoginPwd().trim().length()<4) 
+	      addFieldError("loginName","登录账号不能为空！");
+	    if(getModel().getLoginPwd()==null|| getModel().getLoginPwd().trim().length()<4)
 	      addFieldError("loginPwd","登录密码必须有4位以上！");
-	  
+
 	  }
 
 
 	  //get and  setter
 
 
-	public void setTeacBean(TeacBean teacBean) {
-		this.teacBean = teacBean;
+	public void setManBean(ManBean manBean) {
+		this.manBean = manBean;
 	}
 
 
 
 //	测试函数 main（）
 	public static void main(String[] args) throws Exception {
-		TeacBean ub = new TeacBean();
-		TeacBean bb = new TeacBean();
+		ManBean ub = new ManBean();
+		ManBean bb = new ManBean();
 //		ub.login();
 		if (ub.read("1703001", "111aaa")) System.out.println("true");
 		else System.out.println("false");
@@ -64,7 +63,7 @@ public class LoginT extends ActionSupport implements ModelDriven<Loginbean>{
 			System.out.println(order.getTime());
 		}
 
-		LoginT l=new LoginT();
+		LoginM l=new LoginM();
 		l.execute();
 	}
 	}

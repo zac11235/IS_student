@@ -1,10 +1,12 @@
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <%@ page contentType="text/html; charset=utf-8" %>
 <%--解码字符要求为UTF-8，不然容易出错 --%>
 <%@ page import="java.util.*"%>
 <%@page import="teacher.TeacBean"%>
 <%@ page import="DB.Lesson" %>
+<%@ page import="org.apache.struts2.ServletActionContext" %>
 <html><head>
-    <link rel="stylesheet" type="text/css" href="../../styles.css">
+    <link rel="stylesheet" type="text/css" href="../../css/styles.css">
     <link rel="stylesheet"  href="../../bs/css/bootstrap.css">
     <script src="../bs/js/jquery.min.js"></script>
     <script src="../../bs/js/bootstrap.js"></script>
@@ -28,15 +30,14 @@
             <th>上课时间</th>
         </tr>
         </thead>
-        <jsp:useBean id="teacBean" class="teacher.TeacBean"/>
+        <jsp:useBean id="manBean" class="teacher.TeacBean"/>
         <%
-            Vector lesson=(Vector)teacBean.readLesson();
+            Vector lesson=(Vector)manBean.readLesson();
             for(int i=0;i<lesson.size();i++){
                 Lesson order= (Lesson) lesson.elementAt(i);
         %>
             <tbody>
             <tr align="center" valign="middle">
-
                 <td><%=order.getId()%></td>
                 <td><%=order.getName()%></td>
                 <td> <%=order.getPlace()%></td>

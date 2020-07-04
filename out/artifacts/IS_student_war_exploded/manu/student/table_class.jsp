@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="../../styles.css">
+    <link rel="stylesheet" type="text/css" href="../../css/styles.css">
     <link rel="stylesheet"  href="../../bs/css/bootstrap.css">
     <script src="../bs/js/jquery.min.js"></script>
     <script src="../../bs/js/bootstrap.js"></script>

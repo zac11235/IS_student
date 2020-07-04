@@ -12,6 +12,8 @@
     <title>教师登录</title>
 </head>
 <body>
+<jsp:useBean id="manBean" class="teacher.TeacBean"/>
+<jsp:setProperty name="manBean" property="*"/>
 <div id="form">
     <s:form action="loginTeac.action" class="" method="POST">
         <s:textfield name="loginId" label="职工号" size="22" value="1703001"/>

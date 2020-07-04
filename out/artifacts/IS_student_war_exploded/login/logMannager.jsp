@@ -17,8 +17,8 @@
 </head>
 <body>
 <div id="form">
-    <s:form action="" class="" method="POST">
-        <s:textfield name="loginName" label="管理员号" size="22" value="admin"/>
+    <s:form action="loginAdmin.action" class="" method="POST">
+        <s:textfield name="loginId" label="管理员号" size="22" value="admin1"/>
         <s:password name="loginPwd"  label="密码" size="22"/>
         <s:submit  value="登录" align="center"/>
         <s:reset  value="重置" align="center"/>

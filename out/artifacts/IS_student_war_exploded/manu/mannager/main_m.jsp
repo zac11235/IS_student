@@ -6,9 +6,10 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="../../styles.css">
+    <link rel="stylesheet" type="text/css" href="../../css/styles.css">
     <link rel="stylesheet"  href="../../bs/css/bootstrap.css">
     <script src="../bs/js/jquery.min.js"></script>
     <script src="../../bs/js/bootstrap.js"></script>
@@ -16,22 +17,20 @@
 </head>
 <body>
 <table class="table">
-    <caption>基本的表格布局</caption>
+    <caption>管理员信息</caption>
     <thead>
     <tr>
-        <th>名称</th>
-        <th>城市</th>
+        <th>账户</th>
+        <th>姓名</th>
+        <th>电话</th>
     </tr>
     </thead>
     <tbody>
-    <tr>
-        <td>Tanmay</td>
-        <td>Bangalore</td>
-    </tr>
-    <tr>
-        <td>Sachin</td>
-        <td>Mumbai</td>
-    </tr>
+    <s:property value="manBean.getDept()" />
+    <td><s:property  value="#session.logined"/><br/></td>
+    <td><s:property value="#session.name"/></td>
+    <td><s:property value="#session.phone"/></td>
+
     </tbody>
 </table>
 </body>

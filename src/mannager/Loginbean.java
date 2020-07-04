@@ -1,6 +1,6 @@
-package teacher;
-class Teacher {
-	public Teacher(){
+package mannager;
+class Loginbean {
+	public Loginbean(){
 
 	}
 	private String loginId;  //登录账号

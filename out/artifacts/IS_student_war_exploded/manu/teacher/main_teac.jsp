@@ -1,3 +1,4 @@
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <%--
   Created by IntelliJ IDEA.
   User: mings
@@ -8,14 +9,13 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="../../styles.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="stylesheet"  href="../../bs/css/bootstrap.css">
     <script src="../bs/js/jquery.min.js"></script>
     <script src="../../bs/js/bootstrap.js"></script>
     <title>教师基本信息</title>
 </head>
 <body>
-<jsp:useBean id="teacBean" class="teacher.TeacBean" scope="session"/>
 <table class="table">
     <h1 align="center">教师信息</h1>
     <thead>
@@ -28,10 +28,11 @@
     </thead>
     <tbody>
     <tr>
-        <td><%=teacBean.getId()%></td>
-        <td><%=teacBean.getName()%></td>
-        <td><%=teacBean.getDept()%></td>
-        <td><%=teacBean.getOffice()%></td>
+        <s:property value="manBean.getDept()" />
+        <td><s:property  value="#session.logined"/><br/></td>
+        <td><s:property value="#session.name"/></td>
+        <td><s:property value="#session.dept"/></td>
+        <td><s:property value="#session.office"/></td>
     </tbody>
 </table>
 </body>

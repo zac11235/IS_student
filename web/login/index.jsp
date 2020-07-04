@@ -10,6 +10,7 @@
 <html>
   <head>
     <title>学生信息系统</title>
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
     <link rel="stylesheet"  href="../bs/css/bootstrap.css">
     <script src="../bs/js/jquery.min.js"></script>
     <script src="../bs/js/bootstrap.js"></script>
@@ -31,12 +32,12 @@
       <s:submit  value="登录" align="center"/>
       <s:reset  value="重置" align="center"/>
     </s:form>
-  </div>
-  <div>
-    <a href="">忘记密码，找回</a>
-    <button id="teacher" onclick="window.location.href = 'login/logTeacher.jsp'">教师登录</button>
-    <button id="Mannager" onclick="window.location.href = 'login/logMannager.jsp'">管理员登录</button>
-  </div>
 
+  <div id="">
+    <a href="">忘记密码，找回</a>
+    <button id="teacher" onclick="window.location.href = '../login/logTeacher.jsp'">教师登录</button>
+    <button id="Mannager" onclick="window.location.href = '../login/logMannager.jsp'">管理员登录</button>
+  </div>
+  </div>
   </body>
 </html>

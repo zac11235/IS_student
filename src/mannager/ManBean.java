@@ -1,17 +1,20 @@
-package teacher;
+package mannager;
+
 import DB.Datab;
+import DB.Lesson;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.Vector;
-import DB.*;
-import com.opensymphony.xwork2.ModelDriven;
 
-public class TeacBean extends Datab {
+public class ManBean extends Datab {
     private String id;
     private String password;
     private String name;
-    private String dept;
-    private String office;
+    private String phone;
+
 
     public String getId() {
         return id;
@@ -37,23 +40,16 @@ public class TeacBean extends Datab {
         this.name = name;
     }
 
-    public String getDept() {
-        return dept;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setDept(String deot) {
-        this.dept = deot;
+    public void setPhone(String deot) {
+        this.phone = deot;
     }
 
-    public String getOffice() {
-        return office;
-    }
 
-    public void setOffice(String office) {
-        this.office = office;
-    }
-
-    public TeacBean() {
+    public ManBean() {
 //          id=null;
 //          password=null ;
 //          name=null;
@@ -64,7 +60,7 @@ public class TeacBean extends Datab {
     public boolean read(String id1, String password1) {
         try {
             Connection conn = getcon();
-            String sql = "select * from teacher where id=?";
+            String sql = "select * from admin where id=?";
             PreparedStatement pStmt = conn.prepareStatement(sql);
             pStmt.setString(1, id1);
             ResultSet rs = pStmt.executeQuery();
@@ -74,8 +70,7 @@ public class TeacBean extends Datab {
                 setId(id1);
                 this.password = rs.getString("password").trim();
                 name = rs.getString("name").trim();
-                office = rs.getString("office");
-                dept = rs.getString("dept");
+                phone = rs.getString("phone");
                 return true;
             } else return false;
         } catch (Exception e) {
